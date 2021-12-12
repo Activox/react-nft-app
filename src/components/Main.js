@@ -3,6 +3,7 @@ import instagramLogo  from '../assets/owner/instagram.png'
 import twitterLogo from '../assets/owner/twitter.png'
 import moreIcon from '../assets/owner/more.png'
 import './Main.css'
+
 const Main = ({punkListData, selectedPunk}) => {
 
     const activePunk = punkListData[selectedPunk]
@@ -10,6 +11,7 @@ const Main = ({punkListData, selectedPunk}) => {
     return (
         <div className='main' >
             <div className='mainContent'>
+
                 <div className='punkHighLight'>
                     <div className='punkContainer'>
                         <img 
@@ -19,13 +21,10 @@ const Main = ({punkListData, selectedPunk}) => {
                         />
                     </div>
                 </div>
+
                 <div className='punkDetails' style={{color: '#fff'}}>
-                    <div className='title'>
-                        {activePunk.name}
-                    </div>
-                    <span className='itemNumber'>#{activePunk.token_id}</span>
-                </div>
-                <div className='owner'>
+                    <div className='title'>{activePunk.name} <span className='itemNumber'>#{activePunk.token_id}</span> </div>
+                    <div className='owner'>
                     <div className='ownerImageContainer'>
                         <img src={activePunk.image_original_url} alt=''/>
                     </div>
@@ -45,6 +44,10 @@ const Main = ({punkListData, selectedPunk}) => {
                         </div>
                     </div>
                 </div>
+                </div>
+
+                
+                
             </div>
         </div>
     )
